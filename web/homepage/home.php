@@ -37,7 +37,7 @@
 		<br>
 		<br>
 		<?php
-			echo "The date in server location is " . date("m/d/Y");
+			echo "The date in server location is " . date("m/d/Y") . "\n";
 			echo "The time in server location is " . date("h:m:sa");
 		?>
 	</div>
