@@ -1,0 +1,52 @@
+body {
+	font-family: courier;
+	background-color: black;
+	color: white;
+}
+
+#header {
+	text-align: center;	
+	border-bottom: solid white;
+	color: white;
+}
+
+a:hover {
+	color: #e53030;
+}
+
+.links {
+	color: #4150f4;
+}
+
+#content {
+	text-align: center;
+	padding-left: 20%;
+	padding-right: 20%;
+}
+
+.img-with-text {
+	text-align: justify;
+	width: 400px;
+	font-size: 8pt;
+	float: left;
+}
+
+.img-with-text img {
+	display: block;
+	margin: 0 auto;
+	float: left;	
+}
+
+#gifs {
+	height: 250px;
+	width: 400px;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
