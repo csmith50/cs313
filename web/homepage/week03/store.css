@@ -1,0 +1,40 @@
+.head {
+    background-color: red;
+    color: white;
+    font-family: verdana;
+    text-align: center;
+    width: 1095px;
+    height: 150px;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.sidebar {
+    position: fixed;
+    width: 100px;
+    height: 300px;
+    right: 380px;
+    border-style: hidden;
+    border-left: solid 1px;
+    padding: 5px;
+}
+
+.itemLeft {
+    text-align: center;
+    left: 500px;
+    float: left;
+    position: absolute;
+}
+
+.itemRight {
+    text-align: center;
+    float: right;
+    position: absolute;
+    right: 650px;
+}
+
+.error {
+    color: red;
+    font-family: couriernew;
+}
