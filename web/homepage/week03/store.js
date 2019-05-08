@@ -38,7 +38,7 @@ function shirt1Add() {
         total += 20.00;
     else
         total -= 20.00;
-    document.getElementById("total").value = "$" + total;
+    document.getElementById("total").innerHTML = "total $" + total;
 }
 
 function shirt2Add() {
@@ -47,7 +47,7 @@ function shirt2Add() {
         total += 20.00;
     else
         total -= 20.00;
-    document.getElementById("total").value = "$" + total;
+    document.getElementById("total").innerHTML = "total $" + total;
 }
 
 function pants1Add() {
@@ -56,7 +56,7 @@ function pants1Add() {
         total += 3500.00;
     else
         total -= 3500.00;
-    document.getElementById("total").value = "$" + total;
+    document.getElementById("total").innerHTML = "total $" + total;
 }
 
 function pants2Add() {
@@ -65,7 +65,7 @@ function pants2Add() {
         total += 20.00;
     else
         total -= 20.00;
-    document.getElementById("total").value = "$" + total;
+    document.getElementById("total").innerHTML = "total $" + total;
 }
 
 function shoes1Add() {
@@ -74,7 +74,7 @@ function shoes1Add() {
         total += 20.00;
     else
         total -= 20.00;
-    document.getElementById("total").value = "$" + total;
+    document.getElementById("total").innerHTML = "total $" + total;
 }
 
 function shoes2Add() {
@@ -83,7 +83,7 @@ function shoes2Add() {
         total += 20.00;
     else
         total -= 20.00;
-    document.getElementById("total").value = "$" + total;
+    document.getElementById("total").innerHTML = "total $" + total;
 }
 
 function checkPhone() {
