@@ -55,7 +55,7 @@ if (!empty($_POST['action']) && $_POST['action'] == 'checkout') {
   die();
 }
 else if (!empty($_POST['action']) && $_POST['action'] == 'view cart') {
-  header("Location: https://vast-crag-32349.herokuapp.com/homepage/week03/cart.php") 
+  header("Location: https://vast-crag-32349.herokuapp.com/homepage/week03/cart.php"); 
   die();
 }
 else if (!empty($_POST['action']) && $_POST['action'] == 'add items') {
