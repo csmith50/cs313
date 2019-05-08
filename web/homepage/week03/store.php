@@ -2,11 +2,11 @@
 session_start(); //is only run once
 
 if (!empty($_POST['action']) && $_POST['action'] == 'checkout') {
-  header("Location: https://vast-crag-32349.herokuapp.com/homepage/week03/checkout.php"); //add url later
+  header("Location: https://vast-crag-32349.herokuapp.com/homepage/week03/checkout.php"); 
   die();
 }
 else if (!empty($_POST['action']) && $_POST['action'] == 'view cart') {
-  header("Location: https://vast-crag-32349.herokuapp.com/homepage/week03/cart.php") //add url later
+  header("Location: https://vast-crag-32349.herokuapp.com/homepage/week03/cart.php") 
   die();
 }
 else if (!empty($_POST['action']) && $_POST['action'] == 'add items') {
