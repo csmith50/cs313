@@ -35,7 +35,8 @@ session_start();
 	?>
 	<p>sent to this address:</p>
 	<?php
-		echo htmlspecialchars($_POST[address] . "<br>");
+		echo htmlspecialchars($_POST[address]);
+		echo "<br>";
 		echo htmlspecialchars($_POST[city]) . ", " . htmlspecialchars($_POST[state]) . ", " . htmlspecialchars($_POST[zip]);
 	?>
 </div>
