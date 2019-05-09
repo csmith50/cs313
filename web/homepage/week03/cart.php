@@ -1,4 +1,5 @@
 <?php 
+session_start();
 
 if (!empty($_POST['action']) && $_POST['action'] == 'checkout') {
   header("Location: https://vast-crag-32349.herokuapp.com/homepage/week03/checkout.php"); 
@@ -9,9 +10,6 @@ else if (!empty($_POST['action']) && $_POST['action'] == 'browse') {
   die();
 }
 
-foreach ($_SESSION as $item) {
-	echo $item;
-}
 ?>
 <!DOCTYPE html>
 <html lang = "en">
