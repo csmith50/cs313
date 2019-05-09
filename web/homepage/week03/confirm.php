@@ -28,15 +28,15 @@ session_start();
 <div class = "center">
 	<p>your items:</p>
 	<?php
-		foreach ((array) $_SESSION as $item) {
+		foreach ((array) $_SESSION["items"] as $item) {
 			echo "<img src = " . $item . " alt = \"item\" height = \"100px\" width = \"100px\">";
 		}
 		session_destroy(); //we don't need session variables after this
 	?>
 	<p>sent to this address:</p>
 	<?php
-		echo "$_POST[address] <br>";
-		echo "$_POST[city], $_POST[state], $_POST[zip]";
+		echo htmlspecialchars($_POST[address] . "<br>"");
+		echo htmlspecialchars($_POST[city]) . ", " . htmlspecialchars($_POST[state]) . ", " . htmlspecialchars($_POST[zip]);
 	?>
 </div>
 </body>

@@ -43,7 +43,7 @@ else if (!empty($_POST['action']) && $_POST['action'] == 'browse') {
 			   echo "empty session";
 			}
 			else {
-				foreach ((array) $_SESSION as $item) {
+				foreach ((array) $_SESSION["items"] as $item) {
 					echo "<img src = " . $item . " alt = \"item\" height = \"100px\" width = \"100px\">";
 				}
 			}

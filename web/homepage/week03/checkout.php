@@ -1,15 +1,5 @@
 <?php 
 session_start();
-
-if (!empty($_POST['action']) && $_POST['action'] == 'confirm') {
-  header("Location: https://vast-crag-32349.herokuapp.com/homepage/week03/confirm.php"); 
-  die();
-}
-else if (!empty($_POST['action']) && $_POST['action'] == 'view cart') {
-  header("Location: https://vast-crag-32349.herokuapp.com/homepage/week03/cart.php"); 
-  die();
-}
-
 ?>
 <!DOCTYPE html>
 <html lang = "en">
@@ -29,13 +19,13 @@ else if (!empty($_POST['action']) && $_POST['action'] == 'view cart') {
 	<img src = "sidebar.jpg" alt = "sidebar" height = "100px" width = "100px">
 	<p>generic store goods</p>
 	<p id = "total"><?php echo "total: " . $_SESSION["total"];?></p>
-	<input type = "submit" name = "action" value = "view cart"><br>
 	<br><br>
+	<a href = "store.php">back to browse</a>
 	<a href = "#top">back to top</a>
 </div>
 
 <div class = "center">
-	<form method = "post" action = "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+	<form method = "post" action = "confirm.php">
 		<p>please enter your full address</p><br><br>
 		<p>street address:</p>
 		<input type = "text" name = "address" placeholder="123 south hampton street"><br><br>
