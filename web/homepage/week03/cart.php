@@ -39,7 +39,7 @@ else if (!empty($_POST['action']) && $_POST['action'] == 'browse') {
 		<p>your items:</p>
 		<?php
 			foreach ($_SESSION as $item) {
-			echo "<img src = "$item" alt = "item" height = "100px" width = "100px">";
+				echo "<img src = \"$item\" alt = \"item\" height = \"100px\" width = \"100px\">";
 			}
 		?>
 	</div>
