@@ -1,6 +1,6 @@
 <?php 
 
-	if (!empty($_POST['action']) && $_POST['action'] == 'confirm') {
+if (!empty($_POST['action']) && $_POST['action'] == 'confirm') {
   header("Location: https://vast-crag-32349.herokuapp.com/homepage/week03/confirm.php"); 
   die();
 }

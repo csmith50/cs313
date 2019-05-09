@@ -1,6 +1,6 @@
 <?php 
 
-	if (!empty($_POST['action']) && $_POST['action'] == 'checkout') {
+if (!empty($_POST['action']) && $_POST['action'] == 'checkout') {
   header("Location: https://vast-crag-32349.herokuapp.com/homepage/week03/checkout.php"); 
   die();
 }
@@ -9,6 +9,7 @@ else if (!empty($_POST['action']) && $_POST['action'] == 'browse') {
   die();
 }
 
+?>
 <!DOCTYPE html>
 <html lang = "en">
 <head>
