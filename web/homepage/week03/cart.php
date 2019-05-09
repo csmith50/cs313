@@ -9,6 +9,9 @@ else if (!empty($_POST['action']) && $_POST['action'] == 'browse') {
   die();
 }
 
+foreach ($_SESSION as $item) {
+	echo $item;
+}
 ?>
 <!DOCTYPE html>
 <html lang = "en">
