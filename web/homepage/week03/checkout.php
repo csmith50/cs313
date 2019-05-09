@@ -32,7 +32,7 @@ session_start();
 		<p>city:</p>
 		<input type = "text" name = "city" placeholder="louisville"><br><br>
 		<p>state:</p>
-		<input type = "text" name = "address" placeholder="KY"><br><br>
+		<input type = "text" name = "state" placeholder="KY"><br><br>
 		<p>zip code:</p>
 		<input type = "text" name = "zip" placeholder="76453"><br><br><br><br>
 		<input type = "submit" name = "action" value = "confirm">
