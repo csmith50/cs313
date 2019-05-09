@@ -38,11 +38,11 @@ foreach ($_SESSION as $item) {
 		<a href = "#top">back to top</a>
 	</div>
 
-	<div class = "centered">
+	<div class = "center">
 		<p>your items:</p>
 		<?php
 			foreach ($_SESSION as $item) {
-				echo "<img src = \"$item\" alt = \"item\" height = \"100px\" width = \"100px\">";
+				echo "<img src = " . $item . " alt = \"item\" height = \"100px\" width = \"100px\">";
 			}
 		?>
 	</div>

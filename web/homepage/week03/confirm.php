@@ -25,7 +25,7 @@
 	<p>your items:</p>
 	<?php
 		foreach ($_SESSION as $item) {
-			echo "<img src = \"$item\" alt = \"item\" height = \"100px\" width = \"100px\">";
+			echo "<img src = " . $item . " alt = \"item\" height = \"100px\" width = \"100px\">";
 		}
 		session_destroy(); //we don't need session variables after this
 	?>
