@@ -41,8 +41,13 @@ foreach ($_SESSION as $item) {
 	<div class = "center">
 		<p>your items:</p>
 		<?php
-			foreach ($_SESSION as $item) {
-				echo "<img src = " . $item . " alt = \"item\" height = \"100px\" width = \"100px\">";
+			if (empty($_SESSION)) {
+			   echo "empty session";
+			}
+			else {
+				foreach ((array) $_SESSION as $item) {
+					echo "<img src = " . $item . " alt = \"item\" height = \"100px\" width = \"100px\">";
+				}
 			}
 		?>
 	</div>
