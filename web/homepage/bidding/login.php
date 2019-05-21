@@ -36,7 +36,7 @@ if (!empty($_POST['username']) && !empty($_POST['password'])) {
   		<h1><i>Store</i></h1>
 	</div>
 
-	<form method = "post" action = "<?php echo htmlspecialchars($_SERVER[\"PHP_SELF\"]);?>">
+	<form method = "post" action = "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 		<div class = "sidebar">
 		    <img src = "../week03/sidebar.jpg" alt = "sidebar" height = "100px" width = "100px">
 		    <p>generic store goods</p>
