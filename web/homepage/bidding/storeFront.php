@@ -5,8 +5,7 @@ session_start();
 if (empty($_SESSION['loginID']))
 	$_SESSION['loginID'] = NULL;
 
-if (empty($_SESSION['db']))
-	$_SESSION['db'] = get_db();
+$db = get_db();
 
 ?>
 

@@ -1,9 +1,10 @@
 <?php
 require "helpers.php";
 session_start();
+$db = get_db();
 
 if (!empty($_POST['username']) && !empty($_POST['password'])) {
-	$loginID = login($_POST['username'], $_POST['password'], $_SESSION['db']);
+	$loginID = login($_POST['username'], $_POST['password'], $db);
 	if ($loginID != 0) {
 		$_SESSION['username'] = $_POST['username'];
 		$_SESSION['loginID'] = $loginID;
