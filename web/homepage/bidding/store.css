@@ -51,10 +51,11 @@
 .loginText {
 	text-align: center;
 	width: 1095px;
-	height: 12px;
+	height: 20px;
 	font-size: 11pt;
 }
 
 #loginPText {
 	text-align: right;
+	float: right;
 }

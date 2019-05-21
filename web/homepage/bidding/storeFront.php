@@ -21,12 +21,12 @@ if (empty($_SESSION['db']))
 	<div class = "loginText">
 		<?php
 			if ($_SESSION['loginID'] == NULL) {
-				echo "<a href=\"https://vast-crag-32349.herokuapp.com/homepage/week03/login.php\">login</a>";
+				echo "<a href=\"https://vast-crag-32349.herokuapp.com/homepage/bidding/login.php\">login</a>";
 			}
 			else {
 				echo "<p>logged in as"; 
 				echo $_SESSION['username'];
-				echo "</p>  <a href=\"https://vast-crag-32349.herokuapp.com/homepage/week03/logout.php\">logout</a>";
+				echo "</p>  <a href=\"https://vast-crag-32349.herokuapp.com/homepage/bidding/logout.php\">logout</a>";
 			}
 		?>
 	</div>
