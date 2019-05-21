@@ -20,10 +20,12 @@ if (empty($_SESSION['db']))
 <body>
 	<div class = "loginText">
 		<?php
-			if ($_SESSION['loginID'] == NULL)
+			if ($_SESSION['loginID'] == NULL) {
 				echo "<a href=\"https://vast-crag-32349.herokuapp.com/homepage/week03/login.php\">login</a>";
-			else
+			}
+			else {
 				echo "<p>logged in as $_SESSION['username']</p>  <a href=\"https://vast-crag-32349.herokuapp.com/homepage/week03/logout.php\">logout</a>";
+			}
 		?>
 	</div>
 
