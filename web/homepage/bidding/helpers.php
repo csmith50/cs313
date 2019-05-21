@@ -57,7 +57,7 @@ function makeQuery($table, $db, $condition = NULL) {
 			return $statement;
 			break;
 		default:
-			echo "Error: invalid table"
+			echo "Error: invalid table";
 			break;
 	}
 }
