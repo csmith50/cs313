@@ -26,10 +26,11 @@ if (!empty($_POST['username']) && !empty($_POST['password'])) {
 		<?php
 			if ($_SESSION['loginID'] == NULL)
 				echo "<a href=\"https://vast-crag-32349.herokuapp.com/homepage/week03/login.php\">login</a>";
-			else
+			else if ($_SESSION['loginID'] != 0) {
 				echo "<p>logged in as"; 
 				echo $_SESSION['username'];
 				echo "</p>  <a href=\"https://vast-crag-32349.herokuapp.com/homepage/bidding/logout.php\">logout</a>";
+			}
 		?>
 	</div>
 

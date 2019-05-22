@@ -62,8 +62,8 @@ function makeQuery($table, $db, $condition = NULL) {
 	}
 }
 
-function login($username, $password, $db) {
-	$statement = $db->prepare("SELECT id, password FROM public.user WHERE username = \"$username\"");
+function login($name, $password, $db) {
+	$statement = $db->prepare("SELECT id, password FROM public.user WHERE username = '$name'");
 	$statement->execute();
 	$row = $statement->fetch(PDO::FETCH_ASSOC);
 	if (!empty($row) && isset($row)) 
