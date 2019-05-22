@@ -8,7 +8,7 @@ if (!empty($_POST['username']) && !empty($_POST['password'])) {
 	if ($loginID != 0) {
 		$_SESSION['username'] = $_POST['username'];
 		$_SESSION['loginID'] = $loginID;
-		header("Location: https://vast-crag-32349.herokuapp.com/homepage/bidding/storefront.php");
+		header("Location: https://vast-crag-32349.herokuapp.com/homepage/bidding/storeFront.php");
 		die(); 
 	}
 }
