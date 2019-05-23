@@ -23,9 +23,9 @@ $db = get_db();
 				echo "<a href=\"https://vast-crag-32349.herokuapp.com/homepage/bidding/login.php\">login</a>";
 			}
 			else {
-				echo "<p>logged in as"; 
+				echo "<p>logged in as "; 
 				echo $_SESSION['username'];
-				echo "</p>  <a href=\"https://vast-crag-32349.herokuapp.com/homepage/bidding/logout.php\">logout</a>";
+				echo "</p><a href=\"https://vast-crag-32349.herokuapp.com/homepage/bidding/logout.php\">logout</a>";
 			}
 		?>
 	</div>
@@ -41,9 +41,31 @@ $db = get_db();
 		    <br><br>
 		    <a href = "#top">back to top</a>
   		</div>
+  		<?php
+  			$isLeft = true;
+  			$itemList = makeQuery("itemsList", $db); #get the entire itemsList
 
+  			while ($row = $itemsList->fetch(PDO::FETCH_ASSOC)) {
+  				$name = $row['name'];
+  				$currentBid = $row['currentBid'];
+  				$description = $row['description'];
+  				$currentBidUser = $row['currentBidUser'];
+  				$photoName = $row['photoName'];
+  				$condition = $row['condition'];
+  				$datePosted = $row['datePosted'];
 
+  				if ($isLeft) 
+  					echo "<div class = \"itemLeft\">";
+  				else 
+  					echo "<div class = \"itemRight\">":
+  				$isLeft = !$isLeft;
+
+  				echo "<img src = \"$photoName\" height = \"200px\" width = \"200px\" alt = \"missing photo\">";
+  				echo "<a href = \"https://vast-crag-32349.herokuapp.com/homepage/bidding/itemPage.php?name=$name&currentBid=$currentBid&description=$description&currentBidUser=$currentBidUser&photoName=$photoName&condition=$condition&datePosted=$datePosted\">$name</a>";
+  				echo "</div>";
+  			}
+  		?>
+  		<br><Br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	</form>
-
 </body>
 </html>

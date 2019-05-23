@@ -59,3 +59,7 @@
 	text-align: right;
 	float: right;
 }
+
+.itemContent {
+    font-size: 11pt;
+}
