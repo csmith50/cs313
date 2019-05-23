@@ -57,7 +57,7 @@ $db = get_db();
   				if ($isLeft) 
   					echo "<div class = \"itemLeft\">";
   				else 
-  					echo "<div class = \"itemRight\">":
+  					echo "<div class = \"itemRight\">";
   				$isLeft = !$isLeft;
 
   				echo "<img src = \"$photoName\" height = \"200px\" width = \"200px\" alt = \"missing photo\">";
