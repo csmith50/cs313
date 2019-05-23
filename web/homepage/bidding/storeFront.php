@@ -44,11 +44,8 @@ $db = get_db();
   		<?php
   			$isLeft = true;
   			$itemList = makeQuery("itemsList", $db); #get the entire itemsList
-        alert('Got whole itemsList');
-        alert($itemsList);
 
   			while ($row = $itemsList->fetch(PDO::FETCH_ASSOC)) {
-          alert('entered loop');
   				$name = $row['name'];
   				$currentBid = $row['currentBid'];
   				$description = $row['description'];
@@ -56,19 +53,16 @@ $db = get_db();
   				$photoName = $row['photoName'];
   				$condition = $row['condition'];
   				$datePosted = $row['datePosted'];
-          alert('variables assigned');
 
   				if ($isLeft) 
   					echo "<div class = \"itemLeft\">";
   				else 
   					echo "<div class = \"itemRight\">";
   				$isLeft = !$isLeft;
-          alert('div statement said');
 
   				echo "<img src = \"$photoName\" height = \"200px\" width = \"200px\" alt = \"missing photo\">";
   				echo "<a href = \"https://vast-crag-32349.herokuapp.com/homepage/bidding/itemPage.php?name=$name&currentBid=$currentBid&description=$description&currentBidUser=$currentBidUser&photoName=$photoName&condition=$condition&datePosted=$datePosted\">$name</a>";
   				echo "</div>";
-          alert('items posted');
   			}
   		?>
   		<br><Br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
