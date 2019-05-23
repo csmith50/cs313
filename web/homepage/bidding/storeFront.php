@@ -43,9 +43,11 @@ $db = get_db();
   		</div>
   		<?php
   			$isLeft = true;
-  			$itemList = makeQuery("itemsList", $db); #get the entire itemsList
+  			//$itemList = makeQuery("itemsList", $db); #get the entire itemsList
+        $statement = $db->prepare("SELECT id, name, currentBid, description, currentBidUser, photoName, condition, owner, datePosted FROM itemsList");
+        $statement->execute();
 
-  			while ($row = $itemsList->fetch(PDO::FETCH_ASSOC)) {
+  			while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
   				$name = $row['name'];
   				$currentBid = $row['currentBid'];
   				$description = $row['description'];

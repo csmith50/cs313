@@ -39,7 +39,7 @@ function makeQuery($table, $db, $condition = NULL) {
 			break;
 		case "itemsList":
 			if ($condition != NULL) {
-				$statement = $db->prepare("SELECT id, name, currentBid, description, currentBidUser, photoName, condition, owner, datePosted FROM itemsList WHERE $condition");
+				$statement = $db->prepare("SELECT id, name, currentBid, description, currentBidUser, photoName, condition, owner, datePosted FROM itemsList WHERE '$condition'");
 			}
 			else {
 				$statement = $db->prepare("SELECT id, name, currentBid, description, currentBidUser, photoName, condition, owner, datePosted FROM itemsList");	
