@@ -47,14 +47,21 @@ $db = get_db();
         $statement = $db->prepare("SELECT id, name, currentBid, description, currentBidUser, photoName, condition, owner, datePosted FROM itemsList");
         $statement->execute();
 
-  			while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+  			foreach ($statement as $row) {
   				$name = $row['name'];
+          error_log("row is $row");
   				$currentBid = $row['currentBid'];
+          error_log("currentBid is $currentBid");
   				$description = $row['description'];
+          error_log("description is $description");
   				$currentBidUser = $row['currentBidUser'];
+          error_log("currentBidUser is $currentBidUser");
   				$photoName = $row['photoName'];
+          error_log("photoName is $photoName");
   				$condition = $row['condition'];
+          error_log("condition is $condition");
   				$datePosted = $row['datePosted'];
+          error_log("datePosted is $datePosted");
 
   				if ($isLeft) 
   					echo "<div class = \"itemLeft\">";
