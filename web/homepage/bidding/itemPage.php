@@ -1,6 +1,6 @@
 <?php
-require "helpers.php"
-//session_start();
+require "helpers.php";
+session_start();
 $db = get_db();
 
 
