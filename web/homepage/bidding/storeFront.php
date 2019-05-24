@@ -44,24 +44,18 @@ $db = get_db();
   		<?php
   			$isLeft = true;
   			//$itemList = makeQuery("itemsList", $db); #get the entire itemsList
-        $statement = $db->prepare("SELECT id, name, currentBid, description, currentBidUser, photoName, condition, owner, datePosted FROM itemsList");
+        $statement = $db->prepare("SELECT id, name, photoName FROM itemsList");
         $statement->execute();
 
   			foreach ($statement as $row) {
   				$name = $row['name'];
-          error_log("row is $row");
-  				$currentBid = $row['currentBid'];
-          error_log("currentBid is $currentBid");
-  				$description = $row['description'];
-          error_log("description is $description");
-  				$currentBidUser = $row['currentBidUser'];
-          error_log("currentBidUser is $currentBidUser");
+          error_log("name is $name");
   				$photoName = $row['photoName'];
           error_log("photoName is $photoName");
-  				$condition = $row['condition'];
-          error_log("condition is $condition");
-  				$datePosted = $row['datePosted'];
-          error_log("datePosted is $datePosted");
+          $id = $row['id'];
+          error_log("log is $log");
+  				//$datePosted = $row['datePosted'];
+          //error_log("datePosted is $datePosted");
 
   				if ($isLeft) 
   					echo "<div class = \"itemLeft\">";
@@ -72,7 +66,7 @@ $db = get_db();
   				echo "<img src = \"";
           echo $photoName;
           echo "\" height = \"200px\" width = \"200px\" alt = \"missing photo\">";
-  				echo "<a href = \"https://vast-crag-32349.herokuapp.com/homepage/bidding/itemPage.php?name=$name&currentBid=$currentBid&description=$description&currentBidUser=$currentBidUser&photoName=$photoName&condition=$condition&datePosted=$datePosted\">$name</a>";
+  				echo "<a href = \"https://vast-crag-32349.herokuapp.com/homepage/bidding/itemPage.php?name=$name&photoName=$photoName&id=$id\">$name</a>";
   				echo "</div>";
   			}
   		?>
