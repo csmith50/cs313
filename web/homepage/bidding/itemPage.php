@@ -33,19 +33,23 @@ $db = get_db();
 	<div class = "itemContent">
 		<?php
 			$id = $_GET['id'];
+			$name = $_GET['name'];
+			$photoName = $_GET['photoname'];
 			$statement = $db->prepare("SELECT description, currentbid, currentbiduser FROM itemsList WHERE id = $id");
         	$statement->execute();
         	$row = $statement->fetch(PDO::FETCH_ASSOC);
-			echo "<p><img src = \"$_GET['photoName']\" style = \"padding: 0 15px; float: left;\" height = \"500px\" width = \"500px\"></p>";
-			echo "<p>$_GET['name']</p>";
+        	$description = $row['description'];
+			echo "<p><img src = \"$photoname\" style = \"padding: 0 15px; float: left;\" height = \"500px\" width = \"500px\"></p>";
+			echo "<p>$name</p>";
 			echo "<p>Current Bid: $";
 			echo $row['currentbid'];
 
 			$bidUser = makeQuery("user", $db, $row['currentbiduser']);
 			$row = $bidUser->fetch(PDO::FETCH_ASSOC);
-			echo "by $row['username']</p>";
+			$username = $row['username'];
+			echo "by $username</p>";
 
-			echo "<br><p>$row['description']</p>";
+			echo "<br><p>$description</p>";
 		?>
 	</div>
 </body>
