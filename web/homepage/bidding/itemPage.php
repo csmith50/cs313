@@ -39,7 +39,7 @@ $db = get_db();
         	$statement->execute();
         	$row = $statement->fetch(PDO::FETCH_ASSOC);
         	$description = $row['description'];
-			echo "<p><img src = \"$photoname\" style = \"padding: 0 15px; float: left;\" height = \"500px\" width = \"500px\"></p>";
+			echo "<p><img src = \"$photoName\" style = \"padding: 0 15px; float: left;\" height = \"500px\" width = \"500px\"></p>";
 			echo "<p>$name</p>";
 			echo "<p>Current Bid: $";
 			echo $row['currentbid'];
