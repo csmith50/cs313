@@ -24,6 +24,7 @@ $db = get_db();
 				echo "</p><a href=\"https://vast-crag-32349.herokuapp.com/homepage/bidding/logout.php\">logout</a>";
 			}
 		?>
+		<a href = "https://vast-crag-32349.herokuapp.com/homepage/bidding/storeFront.php">back to main page</a>
 	</div>
 
 	<div class = "head" id = "head">
