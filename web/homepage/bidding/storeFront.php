@@ -62,7 +62,9 @@ $db = get_db();
   					echo "<div class = \"itemRight\">";
   				$isLeft = !$isLeft;
 
-  				echo "<img src = \"$photoName\" height = \"200px\" width = \"200px\" alt = \"missing photo\">";
+  				echo "<img src = \"";
+          echo $photoName;
+          echo "\" height = \"200px\" width = \"200px\" alt = \"missing photo\">";
   				echo "<a href = \"https://vast-crag-32349.herokuapp.com/homepage/bidding/itemPage.php?name=$name&currentBid=$currentBid&description=$description&currentBidUser=$currentBidUser&photoName=$photoName&condition=$condition&datePosted=$datePosted\">$name</a>";
   				echo "</div>";
   			}
