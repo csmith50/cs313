@@ -50,10 +50,10 @@ $db = get_db();
   			foreach ($statement as $row) {
   				$name = $row['name'];
           error_log("name is $name");
-  				$photoName = $row['photoName'];
-          error_log("photoName is $photoName");
+  				$photoName = $row['photoname'];
+          error_log("photoName is $photoname");
           $id = $row['id'];
-          error_log("log is $log");
+          error_log("id is $id");
   				//$datePosted = $row['datePosted'];
           //error_log("datePosted is $datePosted");
 
