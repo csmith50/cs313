@@ -1,6 +1,6 @@
 <?php
 require "helpers.php"
-session_start();
+//session_start();
 $db = get_db();
 
 
@@ -32,15 +32,19 @@ $db = get_db();
 
 	<div class = "itemContent">
 		<?php
+			$statement = $db->prepare("SELECT description, currentbid, currentbiduser FROM itemsList WHERE id = $_GET['id']");
+        	$statement->execute();
+        	$row = $statement->fetch(PDO::FETCH_ASSOC);
 			echo "<p><img src = \"$_GET['photoName']\" style = \"padding: 0 15px; float: left;\" height = \"500px\" width = \"500px\"></p>";
+			echo "<p>$_GET['name']</p>";
 			echo "<p>Current Bid: $";
-			echo $_GET['currentBid'];
+			echo $row['currentbid'];
 
-			$bidUser = makeQuery("user", $db, $_GET['currentBidUser']);
+			$bidUser = makeQuery("user", $db, $row['currentbiduser']);
 			$row = $bidUser->fetch(PDO::FETCH_ASSOC);
 			echo "by $row['username']</p>";
 
-			echo "<br><p>$_GET['description']</p>";
+			echo "<br><p>$row['description']</p>";
 		?>
 	</div>
 </body>
