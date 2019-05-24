@@ -32,7 +32,8 @@ $db = get_db();
 
 	<div class = "itemContent">
 		<?php
-			$statement = $db->prepare("SELECT description, currentbid, currentbiduser FROM itemsList WHERE id = $_GET['id']");
+			$id = $_GET['id'];
+			$statement = $db->prepare("SELECT description, currentbid, currentbiduser FROM itemsList WHERE id = $id");
         	$statement->execute();
         	$row = $statement->fetch(PDO::FETCH_ASSOC);
 			echo "<p><img src = \"$_GET['photoName']\" style = \"padding: 0 15px; float: left;\" height = \"500px\" width = \"500px\"></p>";
