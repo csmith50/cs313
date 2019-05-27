@@ -21,6 +21,7 @@ $db = get_db();
 		<?php
 			if ($_SESSION['loginID'] == NULL) {
 				echo "<a href=\"https://vast-crag-32349.herokuapp.com/homepage/bidding/login.php\">login</a>";
+        echo "<a href=\"https://vast-crag-32349.herokuapp.com/homepage/bidding/createAccount.php\">create account</a>";
 			}
 			else {
 				echo "<p>logged in as "; 
@@ -61,16 +62,18 @@ $db = get_db();
   					echo "<div class = \"itemLeft\">";
   				else 
   					echo "<div class = \"itemRight\">";
-  				$isLeft = !$isLeft;
 
   				echo "<img src = \"";
           echo $photoName;
           echo "\" height = \"200px\" width = \"200px\" alt = \"missing photo\">";
   				echo "<a href = \"https://vast-crag-32349.herokuapp.com/homepage/bidding/itemPage.php?name=$name&photoName=$photoName&id=$id\">$name</a>";
   				echo "</div>";
+
+          if (!$isLeft)
+            echo "<br><Br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>"; //line break on right item
+          $isLeft = !$isLeft;
   			}
   		?>
-  		<br><Br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	</form>
 </body>
 </html>

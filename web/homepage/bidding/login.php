@@ -3,6 +3,11 @@ require "helpers.php";
 session_start();
 $db = get_db();
 
+if (!empty ($_POST['create']) {
+	header("Location: https://vast-crag-32349.herokuapp.com/homepage/bidding/createAccount.php");
+	die();	
+}
+
 if (!empty($_POST['username']) && !empty($_POST['password'])) {
 	$loginID = login($_POST['username'], $_POST['password'], $db);
 	if ($loginID != 0) {
@@ -52,6 +57,7 @@ if (!empty($_POST['username']) && !empty($_POST['password'])) {
   			Password:
   			<input type = "text" name = "password"><br>
   			<input type = "submit" name = "login" value = "login">
+  			<input type = "submit" name = "create" value = "create account">
   		</div>
 	</form>
 </body>
