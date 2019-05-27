@@ -21,17 +21,27 @@
 }
 
 .itemLeft {
-    text-align: center;
+    text-align: justify;
     left: 500px;
     float: left;
     position: absolute;
 }
 
 .itemRight {
-    text-align: center;
+    text-align: justify;
     float: right;
     position: absolute;
     right: 650px;
+}
+
+.itemLeft img {
+    display: block;
+    margin: 0 auto;
+}
+
+.itemRight img {
+    display: block;
+    margin: 0 auto;
 }
 
 .error {

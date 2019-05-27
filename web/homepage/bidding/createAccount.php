@@ -6,7 +6,7 @@ $db = get_db();
 if (!empty($_POST['username']) && !empty($_POST['password'])) {
 	$username = $_POST['username'];
 	$pass = $_POST['password'];
-	$statement = $db->prepare("INSERT INTO public.user (username, password) VALUES ($username, $pass");
+	$statement = $db->prepare("INSERT INTO public.user (username, password) VALUES ($username, $pass)");
 	$statement->execute();
 	header("Location: https://vast-crag-32349.herokuapp.com/homepage/bidding/login.php"); //if we get to this point then sql was successful 
 	die();
