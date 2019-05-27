@@ -3,7 +3,7 @@ require "helpers.php";
 session_start();
 $db = get_db();
 
-if (!empty ($_POST['create']) {
+if (!empty ($_POST['create'])) {
 	header("Location: https://vast-crag-32349.herokuapp.com/homepage/bidding/createAccount.php");
 	die();	
 }
@@ -37,6 +37,7 @@ if (!empty($_POST['username']) && !empty($_POST['password'])) {
 				echo "</p>  <a href=\"https://vast-crag-32349.herokuapp.com/homepage/bidding/logout.php\">logout</a>";
 			}
 		?>
+		<a href = "https://vast-crag-32349.herokuapp.com/homepage/bidding/storeFront.php">back to main page</a>
 	</div>
 
 	<div class = "head" id = "head">

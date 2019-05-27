@@ -31,6 +31,7 @@ if (!empty($_POST['username']) && !empty($_POST['password'])) {
 				echo "</p>  <a href=\"https://vast-crag-32349.herokuapp.com/homepage/bidding/logout.php\">logout</a>";
 			}
 		?>
+		<a href = "https://vast-crag-32349.herokuapp.com/homepage/bidding/storeFront.php">back to main page</a>
 	</div>
 
 	<div class = "head" id = "head">
@@ -40,9 +41,9 @@ if (!empty($_POST['username']) && !empty($_POST['password'])) {
 	<form method = "post" action = "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 		<div class = "center">
 			Please enter a username:
-			<input type = "text" name = "username"><br>
+			<input type = "text" name = "username" required><br>
 			Please enter a password:
-			<input type = "password" name = "password"><br>
+			<input type = "password" name = "password" required><br>
 			<input type = "submit" name = "createAccount" value = "create account"> 
 		</div>
 	</form>
