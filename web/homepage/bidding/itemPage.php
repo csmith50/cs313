@@ -7,7 +7,7 @@ if ($_SESSION['loginID'] != NULL && !empty($_POST['bidValue'])) {
 	$value = floatval($_POST['bidValue']);
 	$pastBidUser = $_POST['cbu'];
 	$newBidUser = $_SESSION['loginID'];
-	$statement = $db->prepare("UPDATE itemsList SET curentbid = $value, currentbiduser = $newBidUser WHERE currentbiduser = $pastBidUser");
+	$statement = $db->prepare("UPDATE itemsList SET currentbid = $value, currentbiduser = $newBidUser WHERE currentbiduser = $pastBidUser");
 	$statement->execute();
 }
 ?>
@@ -54,15 +54,15 @@ if ($_SESSION['loginID'] != NULL && !empty($_POST['bidValue'])) {
 				echo "<p>Current Bid: $";
 				echo $row['currentbid'];
 
-				if ($_SESSION['loginID'] != NULL) {
-					echo "<input type = \"hidden\" name = \"cbu\" value = \"$cbu\">";
-					echo "<p>Your bid:</p><input type = \"text\" name = \"bidValue\"><input type = \"submit\" name = \"newBid\" value = \"bid\">";
-				}
-
 				$bidUser = makeQuery("user", $db, $row['currentbiduser']);
 				$row = $bidUser->fetch(PDO::FETCH_ASSOC);
 				$username = $row['username'];
 				echo "by $username</p>";
+
+				if ($_SESSION['loginID'] != NULL) {
+					echo "<input type = \"hidden\" name = \"cbu\" value = \"$cbu\">";
+					echo "<p>Your bid:</p><input type = \"text\" name = \"bidValue\"><input type = \"submit\" name = \"newBid\" value = \"bid\">";
+				}
 
 				echo "<br><p>$description</p>";
 			?>
