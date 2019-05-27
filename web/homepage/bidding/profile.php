@@ -41,8 +41,9 @@ $db = get_db();
 			$username = $row['username'];
 			$desc = $row['description'];
 			echo "<h1>$username</h1><br>";
-			echo "<p>$description</p>";
+			echo "<p>$desc</p>";
 
+			$db = get_db();
 			$statement = $db->prepare("SELECT name, photoname FROM itemsList WHERE owner = $login");
 			$statement->execute();
 			$row = $statement->fetch(PDO::FETCH_ASSOC);
