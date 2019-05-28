@@ -13,17 +13,17 @@ $currentpass = $row['password'];
 
 if (!empty($_POST['username']) && $_POST['username'] != $currentusername) {
 	$newuser = $_POST['username'];
-	$statement = $db->prepare("UPDATE public.user SET username = $newuser WHERE id = $id");
+	$statement = $db->prepare("UPDATE public.user SET username = '$newuser' WHERE id = $id");
 	$statement->execute();
 }
 if (!empty($_POST['password']) && $_POST['password'] != $currentpass) {
 	$newpass = $_POST['password'];
-	$statement = $db->prepare("UPDATE public.user SET password = $newpass WHERE id = $id");
+	$statement = $db->prepare("UPDATE public.user SET password = '$newpass' WHERE id = $id");
 	$statement->execute();
 }
 if (!empty($_POST['description']) && $_POST['description'] != $currentdesc) {
 	$newdesc = $_POST['description'];
-	$statement = $db->prepare("UPDATE public.user SET description = $newdesc WHERE id = $id");
+	$statement = $db->prepare("UPDATE public.user SET description = '$newdesc' WHERE id = $id");
 	$statement->execute();
 	//at this point we are ready to exit the page
 	header("Location: https://vast-crag-32349.herokuapp.com/homepage/bidding/storeFront.php");
@@ -35,7 +35,7 @@ if (!empty($_POST['description']) && $_POST['description'] != $currentdesc) {
 <html>
 <head>
 	<title>store</title>
-	<link rel = "stylesheet" type = "text/css" src = "store.css">
+	<link rel = "stylesheet" type = "text/css" href = "store.css">
 	<meta charset = "UTF - 8">
 </head>
 <body>
