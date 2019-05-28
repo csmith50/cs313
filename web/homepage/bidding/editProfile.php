@@ -1,6 +1,6 @@
 <?php
 require "helpers.php";
-sessions_start();
+session_start();
 $db = get_db();
 $id = $_SESSION['loginID'];
 
