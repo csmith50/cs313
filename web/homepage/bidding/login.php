@@ -34,7 +34,7 @@ if (!empty($_POST['username']) && !empty($_POST['password'])) {
 			else if ($_SESSION['loginID'] != 0) {
 				echo "<p>logged in as"; 
 				echo $_SESSION['username'];
-				echo "</p>  <a href=\"https://vast-crag-32349.herokuapp.com/homepage/bidding/logout.php\">logout</a>";
+				echo "</p>  <a href=\"https://vast-crag-32349.herokuapp.com/homepage/bidding/logout.php\">logout </a>";
 				echo "<a href=\"https://vast-crag-32349.herokuapp.com/homepage/bidding/profile.php\">profile</a>";
 			}
 		?>

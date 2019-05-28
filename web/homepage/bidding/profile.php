@@ -41,12 +41,11 @@ $db = get_db();
 			$username = $row['username'];
 			$desc = $row['description'];
 			echo "<h1>$username</h1><br>";
-			echo "<p>$desc</p>";
+			echo "<p>$desc</p><br>";
 
 			$db = get_db();
 			$statement = $db->prepare("SELECT name, photoname FROM itemsList WHERE owner = $login");
 			$statement->execute();
-			$row = $statement->fetch(PDO::FETCH_ASSOC);
 			echo "<h3>items this user is selling</h3><br>";
 			foreach ($statement as $row) {
   				$name = $row['name'];
