@@ -44,12 +44,13 @@ $db = get_db();
 			echo "<p>$desc</p><br>";
 
 			$db = get_db();
-			$statement = $db->prepare("SELECT name, photoname FROM itemsList WHERE owner = $login");
+			$statement = $db->prepare("SELECT  id, name, photoname FROM itemsList WHERE owner = $login");
 			$statement->execute();
 			echo "<h3>items this user is selling</h3><br>";
 			foreach ($statement as $row) {
   				$name = $row['name'];
   				$photoName = $row['photoname'];
+  				$id = $row['id'];
 
   				if ($isLeft) 
   					echo "<div class = \"itemLeft\">";
@@ -67,6 +68,7 @@ $db = get_db();
           		$isLeft = !$isLeft;
   			}
 		?>
+		<a href = "https://vast-crag-32349.herokuapp.com/homepage/bidding/editProfile.php">edit profile</a>
 	</div>
 </body>
 </html>
