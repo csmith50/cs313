@@ -55,16 +55,20 @@ if ($_SESSION['loginID'] != NULL && !empty($_POST['bidValue'])) {
 				echo "<p>Current Bid: $";
 				echo $row['currentbid'];
 
+				$owner = $row['owner'];
+
 				$bidUser = makeQuery("user", $db, $row['currentbiduser']);
 				$row = $bidUser->fetch(PDO::FETCH_ASSOC);
 				$username = $row['username'];
 				$bidUserID = $row['id'];
-				echo " by </p> <a href \"https://vast-crag-32349.herokuapp.com/homepage/bidding/profile.php?id=$bidUserID\">$username</a>";
+				echo " by ";
+				echo "<a href = \"https://vast-crag-32349.herokuapp.com/homepage/bidding/profile.php?id=$bidUserID\">$username</a></p>";
 
-				$OGuser = makeQuery("user", $db, $row['owner']);
+				$OGuser = makeQuery("user", $db, $owner);
 				$row = $OGuserr->fetch(PDO::FETCH_ASSOC);
 				$Ousername = $row['username'];
-				echo "<p>Item posted by: </p> <a href\"https://vast-crag-32349.herokuapp.com/homepage/bidding/profile.php?id=$id>$Ousername</a>";
+				echo "<p>Item posted by: ";
+				echo "<a href = \"https://vast-crag-32349.herokuapp.com/homepage/bidding/profile.php?id=$id\">$Ousername</a></p>;
 
 				if ($_SESSION['loginID'] != NULL) {
 					echo "<input type = \"hidden\" name = \"cbu\" value = \"$cbu\">";
