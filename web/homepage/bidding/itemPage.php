@@ -65,7 +65,7 @@ if ($_SESSION['loginID'] != NULL && !empty($_POST['bidValue'])) {
 				echo "<a href = \"https://vast-crag-32349.herokuapp.com/homepage/bidding/profile.php?id=$bidUserID\">$username</a></p>";
 
 				$OGuser = makeQuery("user", $db, $owner);
-				$row = $OGuserr->fetch(PDO::FETCH_ASSOC);
+				$row = $OGuser->fetch(PDO::FETCH_ASSOC);
 				$Ousername = $row['username'];
 				echo "<p>Item posted by: ";
 				echo "<a href = \"https://vast-crag-32349.herokuapp.com/homepage/bidding/profile.php?id=$id\">$Ousername</a></p>";
