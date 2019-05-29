@@ -61,9 +61,9 @@ if (!empty($_POST['description']) && $_POST['description'] != $currentdesc) {
 	<form method = "post" action = "">
 		<div class = "center">
 			<?php
-				echo "Username: <input type = \"text\" name = \"username\" value = \"$currentusername\">";
-				echo "Password: <input type = \"password\" name = \"password\">";
-				echo "Description: <input type = \"textarea\" name = \"description\" value = \"$currentdesc\">";
+				echo "Username: <input type = \"text\" name = \"username\" value = \"$currentusername\"><br>";
+				echo "Password: <input type = \"password\" name = \"password\"><br>";
+				echo "Description: <input type = \"textarea\" name = \"description\" value = \"$currentdesc\" rows = \"5\" cols = \"50\"><br>";
 				echo "<input type = \"submit\" name = \"edit\" value = \"submit changes\">";
 			?>
 		</div>

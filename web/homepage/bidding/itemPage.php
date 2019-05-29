@@ -58,7 +58,7 @@ if ($_SESSION['loginID'] != NULL && !empty($_POST['bidValue'])) {
 				$bidUser = makeQuery("user", $db, $row['currentbiduser']);
 				$row = $bidUser->fetch(PDO::FETCH_ASSOC);
 				$username = $row['username'];
-				echo "by $username</p>";
+				echo " by <a href \"https://vast-crag-32349.herokuapp.com/homepage/bidding/profile.php?id=$id\">$username</a></p>";
 
 				if ($_SESSION['loginID'] != NULL) {
 					echo "<input type = \"hidden\" name = \"cbu\" value = \"$cbu\">";

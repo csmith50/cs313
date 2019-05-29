@@ -34,7 +34,11 @@ $db = get_db();
 
 	<div class = "center">
 		<?php
-			$login = $_SESSION['loginID'];
+			if (!empty($_GET['id']) && $_GET['id'] == $_SESSION['loginID'])
+				$login = $_SESSION['loginID'];
+			else if (!empty($_GET['id']) && $_GET['id'] != $_SESSION['loginID'])
+				$login = $_GET['id'];
+
 			$statement = $db->prepare("SELECT username, description FROM public.user WHERE id = $login");
 			$statement->execute();
 			$row = $statement->fetch(PDO::FETCH_ASSOC);
@@ -66,9 +70,11 @@ $db = get_db();
           		if (!$isLeft)
             		echo "<br><Br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>"; //line break on right item
           		$isLeft = !$isLeft;
+
+          		if (!empty($_GET['id']) && $_GET['id'] == $_SESSION['loginID'])
+          			echo "<a href = \"https://vast-crag-32349.herokuapp.com/homepage/bidding/editProfile.php\">edit profile</a>";
   			}
 		?>
-		<a href = "https://vast-crag-32349.herokuapp.com/homepage/bidding/editProfile.php">edit profile</a>
 	</div>
 </body>
 </html>
