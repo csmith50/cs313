@@ -68,7 +68,7 @@ if ($_SESSION['loginID'] != NULL && !empty($_POST['bidValue'])) {
 				$row = $OGuserr->fetch(PDO::FETCH_ASSOC);
 				$Ousername = $row['username'];
 				echo "<p>Item posted by: ";
-				echo "<a href = \"https://vast-crag-32349.herokuapp.com/homepage/bidding/profile.php?id=$id\">$Ousername</a></p>;
+				echo "<a href = \"https://vast-crag-32349.herokuapp.com/homepage/bidding/profile.php?id=$id\">$Ousername</a></p>";
 
 				if ($_SESSION['loginID'] != NULL) {
 					echo "<input type = \"hidden\" name = \"cbu\" value = \"$cbu\">";
