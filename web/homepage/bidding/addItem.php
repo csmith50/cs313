@@ -6,7 +6,7 @@ $db = get_db();
 <!DOCTYPE html>
 <html>
 <head>
-	<time>store</time>
+	<title>store</title>
 	<link rel = "stylesheet" type = "text/css" href = "store.css">
 	<meta charset = "UTF - 8">
 </head>
@@ -31,19 +31,21 @@ $db = get_db();
 	</div>
 
 	<form method = "post" action = "https://vast-crag-32349.herokuapp.com/homepage/bidding/upload.php" enctype="multipart/form-data">
-		Select image to upload:
-		<input type = "file" name = "imageFile" id = "imageFile" required><br>
-		Type in a name:
-		<input type = "text" name = "name" id = "name" required=""><br>
-		Enter a description for your item:
-		<input type = "text" name = "description" id = "description"><br>
-		Enter a starting bid:
-		<input type = "text" name = "startBid" id = "startBid"><br>
-		Enter a condition for your item:
-		<input type = "radio" name = "condition" value = "New"> New <br>
-		<input type = "radio" name = "condition" value = "Good"> Good <br>
-		<input type = "radio" name = "condition" value = "Used"> Fair <br>
-		<input type = "submit" name = "submit" value = "post item">
+		<div class = "center">
+			Select image to upload:
+			<input type = "file" name = "imageFile" id = "imageFile" required><br>
+			Type in a name:
+			<input type = "text" name = "name" id = "name" required=""><br>
+			Enter a description for your item:
+			<input type = "text" name = "description" id = "description"><br>
+			Enter a starting bid:
+			<input type = "text" name = "startBid" id = "startBid"><br>
+			Enter a condition for your item:<br>
+			<input type = "radio" name = "condition" value = "New"> New <br>
+			<input type = "radio" name = "condition" value = "Good"> Good <br>
+			<input type = "radio" name = "condition" value = "Used"> Fair <br>
+			<input type = "submit" name = "submit" value = "post item">
+		</div>
 	</form>
 </body>
 </html>
