@@ -12,7 +12,7 @@ $photoname = $_FILES["imageFile"]["name"];
 $dateposted = date("m/d/Y");
 
 //first upload the image to the server
-$target_dir = "/homepage/bidding/";
+$target_dir = "../bidding/";
 $target_file = $target_dir . basename($_FILES['imageFile']['name']);
 $uploadOK = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
