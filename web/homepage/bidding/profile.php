@@ -35,6 +35,9 @@ $db = get_db();
 	<div class = "center">
 		<?php
 			if (!empty($_GET['id']) && $_GET['id'] == $_SESSION['loginID'])
+          			echo "<a href = \"https://vast-crag-32349.herokuapp.com/homepage/bidding/editProfile.php\">edit profile</a>";
+
+			if (!empty($_GET['id']) && $_GET['id'] == $_SESSION['loginID'])
 				$login = $_SESSION['loginID'];
 			else if (!empty($_GET['id']) && $_GET['id'] != $_SESSION['loginID'])
 				$login = $_GET['id'];
@@ -53,6 +56,7 @@ $db = get_db();
 			$statement = $db->prepare("SELECT  id, name, photoname FROM itemsList WHERE owner = $login");
 			$statement->execute();
 			echo "<h3>items this user is selling</h3><br>";
+			echo "</div>";
 			foreach ($statement as $row) {
   				$name = $row['name'];
   				$photoName = $row['photoname'];
@@ -72,9 +76,6 @@ $db = get_db();
           		if (!$isLeft)
             		echo "<br><Br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>"; //line break on right item
           		$isLeft = !$isLeft;
-
-          		if (!empty($_GET['id']) && $_GET['id'] == $_SESSION['loginID'])
-          			echo "<a href = \"https://vast-crag-32349.herokuapp.com/homepage/bidding/editProfile.php\">edit profile</a>";
   			}
 		?>
 	</div>
