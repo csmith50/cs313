@@ -32,10 +32,12 @@ $db = get_db();
   		<h1><i>Store</i></h1>
 	</div>
 
+
 	<div class = "center">
 		<?php
-			if (!empty($_GET['id']) && $_GET['id'] == $_SESSION['loginID'])
+			if (!empty($_GET['id']) && $_GET['id'] == $_SESSION['loginID']) {
           			echo "<a href = \"https://vast-crag-32349.herokuapp.com/homepage/bidding/editProfile.php\">edit profile</a>";
+          		}
 
 			if (!empty($_GET['id']) && $_GET['id'] == $_SESSION['loginID'])
 				$login = $_SESSION['loginID'];
@@ -57,6 +59,8 @@ $db = get_db();
 			$statement->execute();
 			echo "<h3>items this user is selling</h3><br>";
 			echo "</div>";
+
+			$isLeft = true;
 			foreach ($statement as $row) {
   				$name = $row['name'];
   				$photoName = $row['photoname'];
@@ -78,6 +82,6 @@ $db = get_db();
           		$isLeft = !$isLeft;
   			}
 		?>
-	</div>
+	<!--</div>-->
 </body>
 </html>
