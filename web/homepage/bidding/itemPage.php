@@ -9,6 +9,8 @@ if ($_SESSION['loginID'] != NULL && !empty($_POST['bidValue'])) {
 	$newBidUser = $_SESSION['loginID'];
 	$statement = $db->prepare("UPDATE itemsList SET currentbid = $value, currentbiduser = $newBidUser WHERE currentbiduser = $pastBidUser");
 	$statement->execute();
+	header("Location: https://vast-crag-32349.herokuapp.com/homepage/bidding/storeFront.php");
+	die();
 }
 ?>
 <!DOCTYPE HTML>

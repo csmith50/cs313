@@ -38,6 +38,8 @@ $db = get_db();
 				$login = $_SESSION['loginID'];
 			else if (!empty($_GET['id']) && $_GET['id'] != $_SESSION['loginID'])
 				$login = $_GET['id'];
+			else
+				$login = $_SESSION['loginID'];
 
 			$statement = $db->prepare("SELECT username, description FROM public.user WHERE id = $login");
 			$statement->execute();
