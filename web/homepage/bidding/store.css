@@ -63,6 +63,9 @@
 	width: 1095px;
 	height: 20px;
 	font-size: 11pt;
+}
+
+.loginText p {
     display: inline;
 }
 
