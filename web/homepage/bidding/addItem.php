@@ -15,7 +15,7 @@ $db = get_db();
 		<?php
 			if ($_SESSION['loginID'] == NULL) {
 				echo "<a href=\"https://vast-crag-32349.herokuapp.com/homepage/bidding/login.php\">login</a> ";
-        echo "<a href=\"https://vast-crag-32349.herokuapp.com/homepage/bidding/createAccount.php\">create account</a>";
+        		echo "<a href=\"https://vast-crag-32349.herokuapp.com/homepage/bidding/createAccount.php\">create account</a>";
 			}
 			else {
 				echo "<p>logged in as "; 
