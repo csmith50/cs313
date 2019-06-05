@@ -27,10 +27,22 @@
     position: absolute;
 }
 
+.itemLeftP {
+    text-align: justify;
+    left: 500px;
+    float: left;
+}
+
 .itemRight {
     text-align: justify;
     float: right;
     position: absolute;
+    right: 650px;
+}
+
+.itemRightP {
+    text-align: justify;
+    float: right;
     right: 650px;
 }
 
@@ -80,5 +92,4 @@
 
 .itemContent {
     font-size: 11pt;
-    text-align: center;
 }

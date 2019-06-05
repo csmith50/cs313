@@ -69,9 +69,9 @@ $db = get_db();
 	  				$id = $row['id'];
 
 	  				if ($isLeft) 
-	  					echo "<div class = \"itemLeft\">";
+	  					echo "<div class = \"itemLeftP\">";
 	  				else 
-	  					echo "<div class = \"itemRight\">";
+	  					echo "<div class = \"itemRightP\">";
 
 	  				echo "<img src = \"";
 	          		echo $photoName;
