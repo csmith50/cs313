@@ -75,7 +75,7 @@ $db = get_db();
 
 	  				echo "<img src = \"";
 	          		echo $photoName;
-	          		echo "\" height = \"200px\" width = \"200px\" alt = \"missing photo\">";
+	          		echo "\" height = \"200px\" width = \"200px\" alt = \"missing photo\"><br>";
 	  				echo "<a href = \"https://vast-crag-32349.herokuapp.com/homepage/bidding/itemPage.php?name=$name&photoName=$photoName&id=$id\">$name</a>";
 	  				echo "</div>";
 
