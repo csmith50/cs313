@@ -31,6 +31,8 @@
     text-align: justify;
     left: 500px;
     float: left;
+    position: absolute;
+    margin-top: 400px;
 }
 
 .itemRight {
@@ -44,6 +46,8 @@
     text-align: justify;
     float: right;
     right: 650px;
+    position: absolute;
+    margin-top: 400px;
 }
 
 .itemLeft img {
