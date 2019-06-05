@@ -30,8 +30,8 @@ if ($_SESSION['loginID'] != NULL && !empty($_POST['bidValue'])) {
 			else {
 				echo "<p>logged in as "; 
 				echo $_SESSION['username'];
-				echo "</p><a href=\"https://vast-crag-32349.herokuapp.com/homepage/bidding/logout.php\">logout </a>";
-				echo "<a href=\"https://vast-crag-32349.herokuapp.com/homepage/bidding/profile.php\">profile </a>";
+				echo " </p><a href=\"https://vast-crag-32349.herokuapp.com/homepage/bidding/logout.php\">logout</a>";
+				echo "<a href=\"https://vast-crag-32349.herokuapp.com/homepage/bidding/profile.php\">profile</a>";
 				echo "<a href = \"https://vast-crag-32349.herokuapp.com/homepage/bidding/addItem.php\">post an item</a>";
 			}
 		?>
@@ -47,7 +47,7 @@ if ($_SESSION['loginID'] != NULL && !empty($_POST['bidValue'])) {
 			<?php
 				$id = $_GET['id'];
 				$name = $_GET['name'];
-				$photoName = $_GET['photoname'];
+				$photoName = $_GET['photoName'];
 				$statement = $db->prepare("SELECT description, currentbid, currentbiduser, owner FROM itemsList WHERE id = $id");
 	        	$statement->execute();
 	        	$row = $statement->fetch(PDO::FETCH_ASSOC);

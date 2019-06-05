@@ -20,7 +20,7 @@ $db = get_db();
 			else {
 				echo "<p>logged in as "; 
 				echo $_SESSION['username'];
-				echo "</p><a href=\"https://vast-crag-32349.herokuapp.com/homepage/bidding/logout.php\">logout</a>";
+				echo " </p><a href=\"https://vast-crag-32349.herokuapp.com/homepage/bidding/logout.php\">logout</a>";
 			}
 		?>
 		<a href = "https://vast-crag-32349.herokuapp.com/homepage/bidding/storeFront.php">back to main page</a>
